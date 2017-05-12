@@ -1,0 +1,27 @@
+{
+    "name": "doc",
+    "version": "1.0.0",
+    "description": "人生不只有代码,还有诗和远方",
+    "keywords": [
+        ""
+    ],
+    "homepage": "http://JSLite.io",
+    "author": "happywanghao <654450587@qq.com>",
+    "repository": {
+        "type": "git",
+        "url": ""
+    },
+    "licenses": "MIT",
+    "idoc": {
+        "theme": "default",
+        "md": [
+            "首页.md",
+            "副页.md",
+            {
+                "react方向": [
+                    "react.md"
+                ]
+            }
+        ]
+    }
+}
