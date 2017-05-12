@@ -16,12 +16,15 @@
         "theme": "default",
         "md": [
             "首页.md",
-            "副页.md",
             {
                 "react方向": [
-                    "react.md"
+                    "准备工作.md",
+                    "react.md",
+                    "react-router.md"
                 ]
-            }
+            },
+            "ajax.md",
+            "yarn.md"
         ]
     }
 }

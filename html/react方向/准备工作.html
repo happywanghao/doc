@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>doc</title>
+        
+    <link rel="stylesheet" type="text/css" href="../../static/css/main.css">
+</head>
+<body>
+<div class="navbar navbar-line">
+    <div class="container">
+        <div class="logo">
+            
+                doc
+            
+        </div>
+        <input type="checkbox" id="idoc_nav" />
+        <div class="menu_tree">
+        <ul><li><a href="../../index.html">首页</a></li><li><a href="#"><span></span>react方向</a><ul><li class="active"><a href="../../html/react方向/准备工作.html">准备工作</a></li><li><a href="../../html/react方向/react.html">react</a></li><li><a href="../../html/react方向/react-router.html">react-router</a></li></ul></li><li><a href="../../html/ajax.html">ajax</a></li><li><a href="../../html/yarn.html">yarn</a></li></ul>    
+        </div>
+        
+        
+
+        <section class="idoc_nav_btn">
+            <label for="idoc_nav"><span></span></label>
+        </section>
+    </div>
+    
+</div>
+
+
+
+
+<div class="container">
+
+    <div class="page-toc">
+        <ul><li><a href="#t0npm start 打开react环境">npm start 打开react环境</a></li><li><a href="#t1const 声明常量只读的">const 声明常量只读的</a></li><li><a href="#t2数组的解构赋值按下标严格去匹配">数组的解构赋值按下标严格去匹配</a></li><li><a href="#t3对象的解构赋值 按照属性名赋值  也是在声明变量">对象的解构赋值 按照属性名赋值  也是在声明变量</a></li><li><a href="#t4let a=()=>88;   函数名 参数 函数体">let a=()=>88;   函数名 参数 函数体</a></li><li><a href="#t5箭头函数返回对象要用小括号包一下  let b()=>({f:"ooo",k:"ppp"})">箭头函数返回对象要用小括号包一下  let b()=>({f:"ooo",k:"ppp"})</a></li><li><a href="#t6...rest剩余参数 数据类型是数组">...rest剩余参数 数据类型是数组</a></li><li><a href="#t7reduce()数组的方法 参数是一个函数 该函数四个参数 且必须有返回值">reduce()数组的方法 参数是一个函数 该函数四个参数 且必须有返回值</a></li><li><a href="#t8... 展开操作符 可以把数组展开">... 展开操作符 可以把数组展开</a></li><li><a href="#t9原生导入导出">原生导入导出</a></li><li><a href="#t10.map()遍历循环数组 返回新数组">.map()遍历循环数组 返回新数组</a></li><li><a href="#t11.filter()过滤数组">.filter()过滤数组</a></li><li><a href="#t12.forEach()参数和.map()的参数和用法一样，遍历数组，没有返回值,也不改变原数组。">.forEach()参数和.map()的参数和用法一样，遍历数组，没有返回值,也不改变原数组。</a></li><li><a href="#t13obj.keys(a)">obj.keys(a)</a></li><li><a href="#t14arr.findindex()   返回索引 .indexOf()的加强版">arr.findindex()   返回索引 .indexOf()的加强版</a></li><li><a href="#t154.26  call()  第一个参数是一个对象  之后放 要运行函数的参数">4.26  call()  第一个参数是一个对象  之后放 要运行函数的参数</a><ul><li><a href="#t16class">class</a></li></ul></li><li><a href="#t17eweee">eweee</a><ul><li><a href="#t18table">table</a></li></ul></li></ul>
+    </div>
+    
+    <div class="content markdown-body">
+        <p>&#x5B89;&#x88C5;&#x7B2C;&#x4E09;&#x65B9;&#x6A21;&#x5757;
+&#x3002;&#x3002;&#x3002;&#x3002;&#x3002;js
+npm install [packgename]
+&#x5378;&#x8F7D;
+npm uninstall []
+&#x5378;&#x8F7D;&#x5B8C;&#x624B;&#x52A8;&#x53BB;&#x5220;&#x8BB0;&#x5F55;</p>
+<p>module.exoorts={</p>
+<p>}</p>
+<p>&#x53EF;&#x4EE5;&#x5BFC;&#x51FA;&#x5BF9;&#x8C61;</p>
+<h4 id="t0npm start &#x6253;&#x5F00;react&#x73AF;&#x5883;">npm start &#x6253;&#x5F00;react&#x73AF;&#x5883; <a href="#t0npm start &#x6253;&#x5F00;react&#x73AF;&#x5883;"> # </a></h4>
+<h4 id="t1const &#x58F0;&#x660E;&#x5E38;&#x91CF;&#x53EA;&#x8BFB;&#x7684;">const &#x58F0;&#x660E;&#x5E38;&#x91CF;&#x53EA;&#x8BFB;&#x7684; <a href="#t1const &#x58F0;&#x660E;&#x5E38;&#x91CF;&#x53EA;&#x8BFB;&#x7684;"> # </a></h4>
+<h4 id="t2&#x6570;&#x7EC4;&#x7684;&#x89E3;&#x6784;&#x8D4B;&#x503C;&#x6309;&#x4E0B;&#x6807;&#x4E25;&#x683C;&#x53BB;&#x5339;&#x914D;">&#x6570;&#x7EC4;&#x7684;&#x89E3;&#x6784;&#x8D4B;&#x503C;&#x6309;&#x4E0B;&#x6807;&#x4E25;&#x683C;&#x53BB;&#x5339;&#x914D; <a href="#t2&#x6570;&#x7EC4;&#x7684;&#x89E3;&#x6784;&#x8D4B;&#x503C;&#x6309;&#x4E0B;&#x6807;&#x4E25;&#x683C;&#x53BB;&#x5339;&#x914D;"> # </a></h4>
+<h4 id="t3&#x5BF9;&#x8C61;&#x7684;&#x89E3;&#x6784;&#x8D4B;&#x503C; &#x6309;&#x7167;&#x5C5E;&#x6027;&#x540D;&#x8D4B;&#x503C;  &#x4E5F;&#x662F;&#x5728;&#x58F0;&#x660E;&#x53D8;&#x91CF;">&#x5BF9;&#x8C61;&#x7684;&#x89E3;&#x6784;&#x8D4B;&#x503C; &#x6309;&#x7167;&#x5C5E;&#x6027;&#x540D;&#x8D4B;&#x503C;  &#x4E5F;&#x662F;&#x5728;&#x58F0;&#x660E;&#x53D8;&#x91CF; <a href="#t3&#x5BF9;&#x8C61;&#x7684;&#x89E3;&#x6784;&#x8D4B;&#x503C; &#x6309;&#x7167;&#x5C5E;&#x6027;&#x540D;&#x8D4B;&#x503C;  &#x4E5F;&#x662F;&#x5728;&#x58F0;&#x660E;&#x53D8;&#x91CF;"> # </a></h4>
+<p><em>**</em>&#x89E3;&#x6784;&#x8D4B;&#x503C;&#x662F;&#x89E3;&#x7684;&#x7B49;&#x53F7;&#x540E;&#x8FB9;&#x7684;&#x6784;</p>
+<p>#&#x7BAD;&#x5934;&#x51FD;&#x6570;</p>
+<h4 id="t4let a=()=&gt;88;   &#x51FD;&#x6570;&#x540D; &#x53C2;&#x6570; &#x51FD;&#x6570;&#x4F53;">let a=()=&gt;88;   &#x51FD;&#x6570;&#x540D; &#x53C2;&#x6570; &#x51FD;&#x6570;&#x4F53; <a href="#t4let a=()=&gt;88;   &#x51FD;&#x6570;&#x540D; &#x53C2;&#x6570; &#x51FD;&#x6570;&#x4F53;"> # </a></h4>
+<h4 id="t5&#x7BAD;&#x5934;&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x5BF9;&#x8C61;&#x8981;&#x7528;&#x5C0F;&#x62EC;&#x53F7;&#x5305;&#x4E00;&#x4E0B;  let b()=&gt;({f:&quot;ooo&quot;,k:&quot;ppp&quot;})">&#x7BAD;&#x5934;&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x5BF9;&#x8C61;&#x8981;&#x7528;&#x5C0F;&#x62EC;&#x53F7;&#x5305;&#x4E00;&#x4E0B;  let b()=&gt;({f:&quot;ooo&quot;,k:&quot;ppp&quot;}) <a href="#t5&#x7BAD;&#x5934;&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x5BF9;&#x8C61;&#x8981;&#x7528;&#x5C0F;&#x62EC;&#x53F7;&#x5305;&#x4E00;&#x4E0B;  let b()=&gt;({f:" ooo",k:"ppp"})"=""> # </a></h4>
+<p>####&#x7BAD;&#x5934;&#x51FD;&#x6570;</p>
+<p>####es6&#x5B57;&#x7B26;&#x4E32;&#x62FC;&#x63A5;&#x7528;&#x6CD5;</p>
+<p>var name=&quot;wanhao&quot;
+var age=&quot;888&quot;
+var str=<code>&lt;p class=&apos;active&apos;&gt;&#x59D3;&#x540D;&#x662F;${name}&#x5E74;&#x9F84;&#x662F;${age}&lt;/p&gt;</code>
+document.body.innerHTML=str</p>
+<p>####es6&#x51FD;&#x6570;&#x7684;&#x5F62;&#x53C2;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x7ED9;&#x9ED8;&#x8BA4;&#x503C;</p>
+<p>let a=function(num=5){
+  return ++num
+}
+a()//6</p>
+<h4 id="t6...rest&#x5269;&#x4F59;&#x53C2;&#x6570; &#x6570;&#x636E;&#x7C7B;&#x578B;&#x662F;&#x6570;&#x7EC4;">...rest&#x5269;&#x4F59;&#x53C2;&#x6570; &#x6570;&#x636E;&#x7C7B;&#x578B;&#x662F;&#x6570;&#x7EC4; <a href="#t6...rest&#x5269;&#x4F59;&#x53C2;&#x6570; &#x6570;&#x636E;&#x7C7B;&#x578B;&#x662F;&#x6570;&#x7EC4;"> # </a></h4>
+<h4 id="t7reduce()&#x6570;&#x7EC4;&#x7684;&#x65B9;&#x6CD5; &#x53C2;&#x6570;&#x662F;&#x4E00;&#x4E2A;&#x51FD;&#x6570; &#x8BE5;&#x51FD;&#x6570;&#x56DB;&#x4E2A;&#x53C2;&#x6570; &#x4E14;&#x5FC5;&#x987B;&#x6709;&#x8FD4;&#x56DE;&#x503C;">reduce()&#x6570;&#x7EC4;&#x7684;&#x65B9;&#x6CD5; &#x53C2;&#x6570;&#x662F;&#x4E00;&#x4E2A;&#x51FD;&#x6570; &#x8BE5;&#x51FD;&#x6570;&#x56DB;&#x4E2A;&#x53C2;&#x6570; &#x4E14;&#x5FC5;&#x987B;&#x6709;&#x8FD4;&#x56DE;&#x503C; <a href="#t7reduce()&#x6570;&#x7EC4;&#x7684;&#x65B9;&#x6CD5; &#x53C2;&#x6570;&#x662F;&#x4E00;&#x4E2A;&#x51FD;&#x6570; &#x8BE5;&#x51FD;&#x6570;&#x56DB;&#x4E2A;&#x53C2;&#x6570; &#x4E14;&#x5FC5;&#x987B;&#x6709;&#x8FD4;&#x56DE;&#x503C;"> # </a></h4>
+<p>[1,2,3,4].reduce(function(a,b){return a+b})   &#x6C42;&#x548C;</p>
+<h4 id="t8... &#x5C55;&#x5F00;&#x64CD;&#x4F5C;&#x7B26; &#x53EF;&#x4EE5;&#x628A;&#x6570;&#x7EC4;&#x5C55;&#x5F00;">... &#x5C55;&#x5F00;&#x64CD;&#x4F5C;&#x7B26; &#x53EF;&#x4EE5;&#x628A;&#x6570;&#x7EC4;&#x5C55;&#x5F00; <a href="#t8... &#x5C55;&#x5F00;&#x64CD;&#x4F5C;&#x7B26; &#x53EF;&#x4EE5;&#x628A;&#x6570;&#x7EC4;&#x5C55;&#x5F00;"> # </a></h4>
+<p>  var arr=[1,2,3]
+   var arr1=[...arr,4,5]
+   //arr1==[1,2,3,4,5]</p>
+<h4 id="t9&#x539F;&#x751F;&#x5BFC;&#x5165;&#x5BFC;&#x51FA;">&#x539F;&#x751F;&#x5BFC;&#x5165;&#x5BFC;&#x51FA; <a href="#t9&#x539F;&#x751F;&#x5BFC;&#x5165;&#x5BFC;&#x51FA;"> # </a></h4>
+<p>  &#x547D;&#x540D;&#x5BFC;&#x51FA;
+  export{str,obj}</p>
+<p>&#x5F15;&#x5165;
+import{ str as ccc } from &apos;./test.js&apos;;
+console.log(str)</p>
+<p>as  &#x4F5C;&#x4E3A;</p>
+<p>&#x9ED8;&#x8BA4;&#x5BFC;&#x51FA;
+export default str</p>
+<p>&#x5F15;&#x5165;&#x65F6;&#x76F4;&#x63A5;&#x8D77;&#x4E2A;&#x540D;&#x5F15;&#x8DEF;&#x5F84;&#x5C31;&#x884C;</p>
+<p>import test from &apos;./test.js&apos;;
+console.log(test)</p>
+<h4 id="t10.map()&#x904D;&#x5386;&#x5FAA;&#x73AF;&#x6570;&#x7EC4; &#x8FD4;&#x56DE;&#x65B0;&#x6570;&#x7EC4;">.map()&#x904D;&#x5386;&#x5FAA;&#x73AF;&#x6570;&#x7EC4; &#x8FD4;&#x56DE;&#x65B0;&#x6570;&#x7EC4; <a href="#t10.map()&#x904D;&#x5386;&#x5FAA;&#x73AF;&#x6570;&#x7EC4; &#x8FD4;&#x56DE;&#x65B0;&#x6570;&#x7EC4;"> # </a></h4>
+<h4 id="t11.filter()&#x8FC7;&#x6EE4;&#x6570;&#x7EC4;">.filter()&#x8FC7;&#x6EE4;&#x6570;&#x7EC4; <a href="#t11.filter()&#x8FC7;&#x6EE4;&#x6570;&#x7EC4;"> # </a></h4>
+<h4 id="t12.forEach()&#x53C2;&#x6570;&#x548C;.map()&#x7684;&#x53C2;&#x6570;&#x548C;&#x7528;&#x6CD5;&#x4E00;&#x6837;&#xFF0C;&#x904D;&#x5386;&#x6570;&#x7EC4;&#xFF0C;&#x6CA1;&#x6709;&#x8FD4;&#x56DE;&#x503C;,&#x4E5F;&#x4E0D;&#x6539;&#x53D8;&#x539F;&#x6570;&#x7EC4;&#x3002;">.forEach()&#x53C2;&#x6570;&#x548C;.map()&#x7684;&#x53C2;&#x6570;&#x548C;&#x7528;&#x6CD5;&#x4E00;&#x6837;&#xFF0C;&#x904D;&#x5386;&#x6570;&#x7EC4;&#xFF0C;&#x6CA1;&#x6709;&#x8FD4;&#x56DE;&#x503C;,&#x4E5F;&#x4E0D;&#x6539;&#x53D8;&#x539F;&#x6570;&#x7EC4;&#x3002; <a href="#t12.forEach()&#x53C2;&#x6570;&#x548C;.map()&#x7684;&#x53C2;&#x6570;&#x548C;&#x7528;&#x6CD5;&#x4E00;&#x6837;&#xFF0C;&#x904D;&#x5386;&#x6570;&#x7EC4;&#xFF0C;&#x6CA1;&#x6709;&#x8FD4;&#x56DE;&#x503C;,&#x4E5F;&#x4E0D;&#x6539;&#x53D8;&#x539F;&#x6570;&#x7EC4;&#x3002;"> # </a></h4>
+<h4 id="t13obj.keys(a)">obj.keys(a) <a href="#t13obj.keys(a)"> # </a></h4>
+<p>&#x8FD4;&#x56DE;&#x8BE5;&#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;&#x540D;&#x7EC4;&#x6210;&#x7684;&#x6570;&#x7EC4;</p>
+<h4 id="t14arr.findindex()   &#x8FD4;&#x56DE;&#x7D22;&#x5F15; .indexOf()&#x7684;&#x52A0;&#x5F3A;&#x7248;">arr.findindex()   &#x8FD4;&#x56DE;&#x7D22;&#x5F15; .indexOf()&#x7684;&#x52A0;&#x5F3A;&#x7248; <a href="#t14arr.findindex()   &#x8FD4;&#x56DE;&#x7D22;&#x5F15; .indexOf()&#x7684;&#x52A0;&#x5F3A;&#x7248;"> # </a></h4>
+<p>&#x4F20;&#x5165;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x548C;filter&#x8FD4;&#x56DE;&#x7684;&#x4E1C;&#x897F;&#x4E0D;&#x4E00;&#x6837;&#xFF0C;&#x4ED6;&#x662F;&#x7D22;&#x5F15;&#xFF0C;filter&#x662F;&#x6570;&#x7EC4;&#x7684;&#x5143;&#x7D20;</p>
+<h1 id="t154.26  call()  &#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x662F;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;  &#x4E4B;&#x540E;&#x653E; &#x8981;&#x8FD0;&#x884C;&#x51FD;&#x6570;&#x7684;&#x53C2;&#x6570;">4.26  call()  &#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x662F;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;  &#x4E4B;&#x540E;&#x653E; &#x8981;&#x8FD0;&#x884C;&#x51FD;&#x6570;&#x7684;&#x53C2;&#x6570; <a href="#t154.26  call()  &#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x662F;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;  &#x4E4B;&#x540E;&#x653E; &#x8981;&#x8FD0;&#x884C;&#x51FD;&#x6570;&#x7684;&#x53C2;&#x6570;"> # </a></h1>
+<h4 id="t16class">class <a href="#t16class"> # </a></h4>
+<p>&#x58F0;&#x660E;&#x4E00;&#x4E2A;&#x7C7B;
+  constructor{&#x79C1;&#x6709;&#x5C5E;&#x6027;}</p>
+<p>  &#x5982;&#x679C;&#x662F;&#x5B50;&#x7C7B;&#x5B9A;&#x4E49;constructor&#x5FC5;&#x987B;&#x5148;&#x5199;super()</p>
+<p>&#x65B9;&#x6CD5;&#x4E0E;&#x65B9;&#x6CD5;&#x4E4B;&#x95F4;&#x4E0D;&#x80FD;&#x6709;&#x5206;&#x53F7;&#x6216;&#x8005;&#x9017;&#x53F7;</p>
+<p>class&#x7684;&#x540D;&#x5B57;&#x9996;&#x5B57;&#x6BCD;&#x5927;&#x5199;</p>
+<p>class&#x7684;&#x65B9;&#x6CD5;&#x5185;&#x90E8;&#x5C31;&#x6B63;&#x5E38;&#x4E86;&#xFF0C;</p>
+<p>  throw new Error(&apos;&#x5B50;&#x7C7B;&#x5FC5;&#x987B;&#x5B9E;&#x73B0;&apos;)
+  &#x4E3B;&#x52A8; &#x62A5;&#x4E2A;&#x9519;</p>
+<h1 id="t17eweee">eweee <a href="#t17eweee"> # </a></h1>
+<p>&#x503E;&#x659C;<em>&#x6211;&#x662F;&#x659C;&#x4F53;</em>&#x4E86;&#x4E48;</p>
+<p><a href="http://www.baidu.com">baidu</a></p>
+<p><img src="http://imgstore.cdn.sogou.com/app/a/100540002/686672.jpg" alt=""></p>
+<h3 id="t18table">table <a href="#t18table"> # </a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Header One</th>
+<th style="text-align:left">Header Two</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Item One</td>
+<td style="text-align:left">Item Two</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>&#x597D;&#x597D;&#x5B66;&#x4E60;</p>
+</blockquote>
+<hr>
+<p>&#x6211;&#x662F;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;<code>windeo</code>aaa</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Header One</th>
+<th style="text-align:left">Header Two</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Item One</td>
+<td style="text-align:left">Item Two</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>&#x6211;&#x662F;&#x65E0;&#x5E8F;&#x5217;&#x8868;</li>
+</ul>
+<ol>
+<li>&#x6211;&#x662F;&#x6709;&#x5E8F;&#x5217;&#x8868;</li>
+<li>&#x6709;&#x5E8F;</li>
+<li>&#x6709;&#x5E8F;</li>
+<li>&#x6709;&#x5E8F;</li>
+</ol>
+<ul>
+<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+Aliquam hendrerit mi posuere lectus. Vestibulum enim wisi,
+viverra nec, fringilla in, laoreet vitae, risus.</li>
+<li>Donec sit amet nisl. Aliquam semper ipsum sit amet velit.
+Suspendisse id sem consectetuer libero luctus adipiscing.</li>
+</ul>
+
+        <div class="copyright">Powered by <a href="https://github.com/jaywcjlove/idoc" target="_blank">idoc</a>. Dependence <a href="https://nodejs.org">Node.js</a> run.</div>
+    </div>
+
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>doc</title>
+        
+    <link rel="stylesheet" type="text/css" href="../static/css/main.css">
+</head>
+<body>
+<div class="navbar navbar-line">
+    <div class="container">
+        <div class="logo">
+            
+                doc
+            
+        </div>
+        <input type="checkbox" id="idoc_nav" />
+        <div class="menu_tree">
+        <ul><li><a href="../index.html">首页</a></li><li><a href="#"><span></span>react方向</a><ul><li><a href="../html/react方向/准备工作.html">准备工作</a></li><li><a href="../html/react方向/react.html">react</a></li><li><a href="../html/react方向/react-router.html">react-router</a></li></ul></li><li class="active"><a href="../html/ajax.html">ajax</a></li><li><a href="../html/yarn.html">yarn</a></li></ul>    
+        </div>
+        
+        
+
+        <section class="idoc_nav_btn">
+            <label for="idoc_nav"><span></span></label>
+        </section>
+    </div>
+    
+</div>
+
+
+
+
+<div class="container">
+
+    <div class="page-toc">
+        <ul><li><a href="#t0AJAX 是与服务器交换数据并更新部分网页的艺术，在不重新加载整个页面的情况下。">AJAX 是与服务器交换数据并更新部分网页的艺术，在不重新加载整个页面的情况下。</a><ul><li><a href="#t1请求  请求头和请求体 请求头是客户端的信息">请求  请求头和请求体 请求头是客户端的信息</a></li><li><a href="#t2Async = true">Async = true</a></li><li><a href="#t3GET 和POST">GET 和POST</a></li></ul></li><li><a href="#t4jq AJAX">jq AJAX</a></li></ul>
+    </div>
+    
+    <div class="content markdown-body">
+        <h3 id="t0AJAX &#x662F;&#x4E0E;&#x670D;&#x52A1;&#x5668;&#x4EA4;&#x6362;&#x6570;&#x636E;&#x5E76;&#x66F4;&#x65B0;&#x90E8;&#x5206;&#x7F51;&#x9875;&#x7684;&#x827A;&#x672F;&#xFF0C;&#x5728;&#x4E0D;&#x91CD;&#x65B0;&#x52A0;&#x8F7D;&#x6574;&#x4E2A;&#x9875;&#x9762;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x3002;">AJAX &#x662F;&#x4E0E;&#x670D;&#x52A1;&#x5668;&#x4EA4;&#x6362;&#x6570;&#x636E;&#x5E76;&#x66F4;&#x65B0;&#x90E8;&#x5206;&#x7F51;&#x9875;&#x7684;&#x827A;&#x672F;&#xFF0C;&#x5728;&#x4E0D;&#x91CD;&#x65B0;&#x52A0;&#x8F7D;&#x6574;&#x4E2A;&#x9875;&#x9762;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x3002; <a href="#t0AJAX &#x662F;&#x4E0E;&#x670D;&#x52A1;&#x5668;&#x4EA4;&#x6362;&#x6570;&#x636E;&#x5E76;&#x66F4;&#x65B0;&#x90E8;&#x5206;&#x7F51;&#x9875;&#x7684;&#x827A;&#x672F;&#xFF0C;&#x5728;&#x4E0D;&#x91CD;&#x65B0;&#x52A0;&#x8F7D;&#x6574;&#x4E2A;&#x9875;&#x9762;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x3002;"> # </a></h3>
+<h4 id="t1&#x8BF7;&#x6C42;  &#x8BF7;&#x6C42;&#x5934;&#x548C;&#x8BF7;&#x6C42;&#x4F53; &#x8BF7;&#x6C42;&#x5934;&#x662F;&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x4FE1;&#x606F;">&#x8BF7;&#x6C42;  &#x8BF7;&#x6C42;&#x5934;&#x548C;&#x8BF7;&#x6C42;&#x4F53; &#x8BF7;&#x6C42;&#x5934;&#x662F;&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x4FE1;&#x606F; <a href="#t1&#x8BF7;&#x6C42;  &#x8BF7;&#x6C42;&#x5934;&#x548C;&#x8BF7;&#x6C42;&#x4F53; &#x8BF7;&#x6C42;&#x5934;&#x662F;&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x4FE1;&#x606F;"> # </a></h4>
+<h4 id="t2Async = true">Async = true <a href="#t2Async = true"> # </a></h4>
+<p>&#x5F53;&#x4F7F;&#x7528; async=true &#x65F6;&#xFF0C;&#x8BF7;&#x89C4;&#x5B9A;&#x5728;&#x54CD;&#x5E94;&#x5904;&#x4E8E; onreadystatechange &#x4E8B;&#x4EF6;&#x4E2D;&#x7684;&#x5C31;&#x7EEA;&#x72B6;&#x6001;&#x65F6;&#x6267;&#x884C;&#x7684;&#x51FD;&#x6570;&#xFF1A;
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 &amp;&amp; xmlhttp.status==200)
+    {
+    document.getElementById(&quot;myDiv&quot;).innerHTML=xmlhttp.responseText;
+    }
+  }
+xmlhttp.open(&quot;GET&quot;,&quot;test1.txt&quot;,true);
+xmlhttp.send();</p>
+<h4 id="t3GET &#x548C;POST">GET &#x548C;POST <a href="#t3GET &#x548C;POST"> # </a></h4>
+<p>post &#x662F;&#x5F80;&#x540E;&#x53F0;&#x4F20;&#x6570;&#x636E;</p>
+<pre><code>&lt;script&gt;
+var xml=new XMLHttpRequest()
+xml.onreadystatechange=function(){
+  if (xml.readyState==4 &amp;&amp; xml.status==200){
+    console.log(JSON.parse(xml.responseText))
+    // box.innerHTML=JSON.parse(xml.responseText).login
+  }
+}
+console.log(xml)
+xml.open(&apos;POST&apos;,&apos;https://cnodejs.org/api/v1/accesstoken&apos;,true)
+xml.setRequestHeader(&quot;Content-type&quot;,&quot;application/json&quot;)
+let data={
+  accesstoken:&quot;3f77acb1-d753-4393-b784-44913190e6a8&quot;
+}
+xml.send(JSON.stringify(data))
+&lt;/script&gt;
+</code></pre><p>&#x8BBE;&#x7F6E;&#x8BF7;&#x6C42;&#x5934; &#x6570;&#x636E;&#x7C7B;&#x578B;&#x6362;&#x6210;json</p>
+<h2 id="t4jq AJAX">jq AJAX <a href="#t4jq AJAX"> # </a></h2>
+<ul>
+<li>get &#x8BF7;&#x6C42;
+```<script>
+$.ajax({
+  url:'https://cnodejs.org/api/v1/topics',
+  success: function(data){
+    console.log(data)
+  },
+  error: function(){
+    console.log('我是上边的错误')
+  }
+}).done(function(data){
+    console.log(data)
+}).fail(function(){
+    console.log('我是下边的错误')
+}).always(function(){
+    console.log('请求完毕')
+})
+console.log($.ajax)
+</script>
+
+</li>
+</ul>
+<pre><code>* post
+</code></pre><script>
+  $.ajax({
+    method:'post',
+    dataType:'json',//期望后台返回的数据类型
+    contentType:'application/json',//发往后台的数据类型
+    url:'https://cnodejs.org/api/v1/accesstoken',
+    data:JSON.stringify({accesstoken:'3f77acb1-d753-4393-b784-44913190e6a8'}),
+
+    success: function(data){
+      console.log(data)
+    },
+    error: function(){
+      console.log('我是上边的错误')
+    }
+  }).done(function(data){
+      console.log(data)
+  }).fail(function(){
+      console.log('我是下边的错误')
+  }).always(function(){
+      console.log('请求完毕')
+  })
+  console.log($.ajax)
+</script>
+
+<pre><code>
+##  &#x8DE8;&#x57DF;&#x8BF7;&#x6C42;
+&#x8C46;&#x74E3;&#x7684;api
+&#x514D;&#x8D39;&#x7684;api
+
+Access-Control-Allow-Origin:*
+&#x8FDE;&#x63A5;&#x63A7;&#x5236;&#x5141;&#x8BB8;&#x6E90;
+&#x534F;&#x8BAE;,&#x57DF;&#x540D;,&#x7AEF;&#x53E3;,&#x90FD;&#x76F8;&#x540C;&#x5C31;&#x662F;&#x540C;&#x6E90;
+&#x4E00;&#x822C;&#x90FD;&#x662F;&#x540E;&#x53F0;&#x89E3;&#x51B3;
+jq&#x7684;
+jsonp
+</code></pre><p>method:&apos;post&apos;,
+dataType:&apos;jsonp&apos;,//&#x671F;&#x671B;&#x540E;&#x53F0;&#x8FD4;&#x56DE;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;
+jsonp:&apos;callback&apos;,
+contentType:&apos;application/json&apos;,//&#x53D1;&#x5F80;&#x540E;&#x53F0;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;
+url:&apos;<a href="https://api.douban.com/v2/book/1220562">https://api.douban.com/v2/book/1220562</a>&apos;,
+data:JSON.stringify({accesstoken:&apos;3f77acb1-d753-4393-b784-44913190e6a8&apos;}),</p>
+<p>success: function(data){
+  console.log(data)
+},
+error: function(){
+  console.log(&apos;&#x6211;&#x662F;&#x4E0A;&#x8FB9;&#x7684;&#x9519;&#x8BEF;&apos;)
+}
+}).done(function(data){
+  console.log(data)
+}).fail(function(){
+  console.log(&apos;&#x6211;&#x662F;&#x4E0B;&#x8FB9;&#x7684;&#x9519;&#x8BEF;&apos;)
+}).always(function(){
+  console.log(&apos;&#x8BF7;&#x6C42;&#x5B8C;&#x6BD5;&apos;)
+})
+console.log($.ajax)</p>
+<pre><code>##  es6&#x7684; fetch &#x7684; get &#x8BF7;&#x6C42;
+</code></pre><p> fetch(&apos;<a href="https://api.github.com/users/newming">https://api.github.com/users/newming</a>&apos;)
+   .then(function(response){
+     return response.json()
+   }).then(function(json){
+     console.log(json)
+   })</p>
+<pre><code> post&#x8BF7;&#x6C42;
+</code></pre><p> &#x4E3A;&#x4E86;&#x6267;&#x884C;POST&#x63D0;&#x4EA4;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5C06;method&#x5C5E;&#x6027;&#x503C;&#x8BBE;&#x7F6E;&#x4E3A;post&#xFF0C;&#x5E76;&#x4E14;&#x5728;body&#x5C5E;&#x6027;&#x503C;&#x4E2D;&#x8BBE;&#x7F6E;&#x9700;&#x8981;&#x63D0;&#x4EA4;&#x7684;&#x6570;&#x636E;&#x3002;</p>
+<p>fetch(url,{
+    method:&quot;post&quot;,
+    headers:{
+        &quot;Content-type&quot;:&quot;application:/x-www-form-urlencoded:charset=UTF-8&quot;
+    },
+    body:&quot;name=lulingniu&amp;age=40&quot;
+})
+.then(status)
+.then(json)
+.then(function(data){
+    console.log(&quot;&#x8BF7;&#x6C42;&#x6210;&#x529F;&#xFF0C;JSON&#x89E3;&#x6790;&#x540E;&#x7684;&#x54CD;&#x5E94;&#x6570;&#x636E;&#x4E3A;:&quot;,data);
+})
+.catch(function(err){
+    console.log(&quot;Fetch&#x9519;&#x8BEF;:&quot;+err);
+});</p>
+<pre><code>.catch&#x662F;&#x5931;&#x8D25;&#x7684;&#x7ED3;&#x679C;
+.then&#x662F;&#x6210;&#x529F;&#x7684;&#x7ED3;&#x679C;
+
+## &#x7528; axios &#x53D1;ajax&#x8BF7;&#x6C42;
+</code></pre><p>&#x4ECE;github &#x76F4;&#x63A5;&#x641C;axios</p>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+  axios.get('https://api.github.com/users/newming')
+  .then((res)=>console.log(res.data))
+</script>
+
+<p>```</p>
+
+        <div class="copyright">Powered by <a href="https://github.com/jaywcjlove/idoc" target="_blank">idoc</a>. Dependence <a href="https://nodejs.org">Node.js</a> run.</div>
+    </div>
+
+</div>
+
+
+</body>
+</html>
